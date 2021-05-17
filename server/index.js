@@ -27,7 +27,7 @@ const URL = `${HOST}:${PORT}`;
 const PATH = require("path");
 const CORS = /^.+localhost:(3000|8000|8080)$/;
 const CONF = {
-    origin: `http://${URL}` || CORS,
+    origin: CORS || `http://${URL}`,
     optionsSuccessStatus: 200,
 };
 
@@ -38,7 +38,15 @@ if (process.env.NODE_ENV === "production") {
             console.log(
                 `${request.method} ${request.protocol}://${URL}${request.url}`
             );
-            next();
+            // next();
+            // Protocol conditions
+            if (request.header("x-forwarded-proto") !== "https") {
+                response.redirect(
+                    `https://${request.header("host")}${request.url}`
+                );
+            } else {
+                next();
+            }
         })
         .get(/.*/, (request, response) => {
             response.render(PATH.join(__dirname, "/dist/index"));
@@ -47,7 +55,13 @@ if (process.env.NODE_ENV === "production") {
 
 App.use((request, response, next) => {
     console.log(`${request.method} ${request.protocol}://${URL}${request.url}`);
-    next();
+    // next();
+    // Protocol conditions
+    if (request.header("x-forwarded-proto") !== "https") {
+        response.redirect(`https://${request.header("host")}${request.url}`);
+    } else {
+        next();
+    }
 })
     .use(cors(CONF))
     .use(cookieParser())
@@ -82,5 +96,5 @@ mongoose
 
 // Server listen
 App.listen(PORT, () =>
-    console.log(`CORS|CSRF enabled, mevn is listening on ${CONF.origin}`)
+    console.log(`CORS|CSRF enabled, mevn is listening on https://${URL}`)
 );
