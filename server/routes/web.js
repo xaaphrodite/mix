@@ -1,8 +1,5 @@
-const csrf = require("csurf");
-const csrfProtection = csrf({ cookie: true });
 const express = require("express");
 const route = express.Router();
-const mevnController = require("../app/controllers/mevnController");
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +11,12 @@ const mevnController = require("../app/controllers/mevnController");
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Middleware in array![]
+const csrfProtection = require("../app/middleware/CSRFMiddleware");
+
+// Controller
+const mevnController = require("../app/controllers/mevnController");
 
 route.get("/", csrfProtection, mevnController.index);
 
