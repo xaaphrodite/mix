@@ -5,8 +5,10 @@
 |
 | Author    : rasetiansyah
 | Github    : https://github.com/xaaphrodite
+| Facebook  : https://www.facebook.com/xaaphrodite
 | Instagram : https://www.instagram.com/rasetiansyah_
 | Discord   : https://discordapp.com/users/742543110856507482
+| LinkedIn  | https://www.linkedin.com/in/rivane-rasetiansyah-b55199212
 |
 */
 
@@ -19,8 +21,8 @@ const cookieParser = require("cookie-parser");
 
 // Configurations
 const App = express();
-const HOST = process.env.SERVER_HOST || "localhost";
-const PORT = process.env.SERVER_PORT || 8000;
+const HOST = process.env.HOST || "localhost";
+const PORT = process.env.PORT || 8000;
 const URL = `${HOST}:${PORT}`;
 const PATH = require("path");
 const CORS = /^.+localhost:(3000|8000|8080)$/;

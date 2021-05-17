@@ -4,7 +4,7 @@
       <router-link @click="sideBar" class="navbar-brand mevnapp" to="">
         Henllo MEVN
         <img src="/src/assets/js.png" />
-        <span style="font-size: 13px"> being development</span>
+        <span style="font-size: 11px"> being development</span>
       </router-link>
       <button @click="rmSide" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
