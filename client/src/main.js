@@ -7,7 +7,7 @@ import App from "../src/App.vue";
 
 /*
 |--------------------------------------------------------------------------
-| MongodbExpressVueNode - client
+| Henllo MEVN - client
 |--------------------------------------------------------------------------
 |
 | Author    : rasetiansyah

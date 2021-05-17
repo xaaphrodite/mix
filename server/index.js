@@ -1,6 +1,6 @@
 /*
 |--------------------------------------------------------------------------
-| MongodbExpressVueNode - server
+| Henllo MEVN - server
 |--------------------------------------------------------------------------
 |
 | Author    : rasetiansyah
@@ -96,5 +96,5 @@ mongoose
 
 // Server listen
 App.listen(PORT, () =>
-    console.log(`CORS|CSRF enabled, mevn is listening on https://${URL}`)
+    console.log(`CORS|CSRF enabled, Henllo MEVN is listening on https://${URL}`)
 );
