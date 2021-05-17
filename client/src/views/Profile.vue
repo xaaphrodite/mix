@@ -16,7 +16,7 @@
 
       <div class="row">
         <div class="row-right">
-          <p class="text">I have no special talents. I am only passionately curious.</p>
+          <p class="text">"I have no special talents. I am only passionately curious." - Albert Einstein</p>
           <div class="about-content container">
             <ul>
               <li class="text">
@@ -28,20 +28,20 @@
                 <span>February 18, 2001</span>
               </li>
               <li class="text">
-                <span>Address: </span>
-                <span>Bandung, Indonesia</span>
-              </li>
-              <li class="text">
                 <span>Education: </span>
                 <span>Universitas Jenderal Achmad Yani</span>
               </li>
               <li class="text">
-                <span>Email: </span>
-                <span id="email">rasetiansyah@outlook.com</span>
+                <span>Address: </span>
+                <span>Bandung, Indonesia</span>
               </li>
               <li class="text">
                 <span>Zip code: </span>
                 <span>40394</span>
+              </li>
+              <li class="text">
+                <span>Email: </span>
+                <span id="email">rasetiansyah@outlook.com</span>
               </li>
               <li class="text">
                 <span>Phone: </span>

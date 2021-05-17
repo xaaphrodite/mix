@@ -20,7 +20,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="" @click="sideBar">
+        <router-link to="/server" @click="sideBar">
           <span class="icon"><i class="fas fa-cogs"></i></span>
           <span class="title">Server side</span>
         </router-link>

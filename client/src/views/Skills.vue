@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ab laudantium possimus molestias sapiente, saepe facilis dolore autem repellat, quo iure tempore nisi perspiciatis. Quasi?</p>
+      <p class="text">"The most difficult thing is the decision to act. The rest is merely tenacity." - Amelia Earhart</p>
 
       <div class="row">
         <div class="item">
@@ -87,6 +87,7 @@
           </div>
         </div>
       </div>
+      <h6 style="color: #57646f">Tap the JS logo for more options</h6>
     </section>
   </div>
   <!-- end of skills page -->

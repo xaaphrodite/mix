@@ -24,8 +24,8 @@
         </div>
       </section>
       <p id="svg-p">mobile view</p>
-      <img id="svg" src="src/assets/undraw/undraw7.svg" />
-      <img id="svg1" src="src/assets/undraw/undraw4.png" />
+      <img id="svg" src="/src/assets/undraw/undraw7.svg" />
+      <img id="svg1" src="/src/assets/undraw/undraw4.png" />
     </div>
     <h6 style="color: #57646f">Tap the JS logo for more options</h6>
   </div>

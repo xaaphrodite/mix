@@ -4,6 +4,7 @@ import Project from "../views/Project.vue";
 import Contact from "../views/Contact.vue";
 import Skills from "../views/Skills.vue";
 import Profile from "../views/Profile.vue";
+import Server from "../views/Server.vue";
 
 const routes = [
   {
@@ -30,6 +31,15 @@ const routes = [
         path: "profile",
         name: "Profile",
         component: Profile,
+      },
+      {
+        path: "server",
+        name: "Server",
+        component: Server,
+      },
+      {
+        path: "/:pathMatch(.*)*",
+        redirect: "/server",
       },
     ],
   },

@@ -40,7 +40,7 @@
             <h2>02</h2>
             <h3>Henllo MEVN</h3>
             <p style="font-size: 0.8em">Single page application built using MEVN technology.</p>
-            <router-link to="/" style="cursor: pointer">Visit Site</router-link>
+            <router-link to="/" style="cursor: pointer">Redirect</router-link>
             <p class="mt-3">*router link</p>
           </div>
         </div>
@@ -57,7 +57,8 @@
           </div>
         </div>
       </div>
-      <img id="svg" src="src/assets/undraw/undraw3.svg" />
+      <img id="svg" src="/src/assets/undraw/undraw3.svg" />
+      <h6 style="color: #57646f">Tap the JS logo for more options</h6>
     </section>
   </main>
 </template>
