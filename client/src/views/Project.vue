@@ -11,7 +11,7 @@
       <div class="container">
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
-            <h5 class="display-4">My Project rasetiansyah@outlook.com</h5>
+            <h5 class="display-4">Project rasetiansyah@outlook.com</h5>
             <p class="lead">a collection of projects and documentation that has been created</p>
           </div>
           <hr />
@@ -26,7 +26,7 @@
           <div class="content">
             <h2>01</h2>
             <h3>Error404</h3>
-            <p style="font-size: 0.8em">Site with Back-End technology from Laravel and Vue as Front-End, uses sanctum for user authentication and the site stores user data in local storage with key encryption.</p>
+            <p style="font-size: 0.8em">Site with Back end technology from Laravel and Vue as Front end, uses sanctum for user authentication and the site stores user data in local storage with key encryption.</p>
             <a href="https://xaaphrodite.herokuapp.com/">Visit Site</a>
             <p class="mt-3">xaaphrodite.herokuapp.com</p>
           </div>
@@ -38,9 +38,9 @@
           <span></span>
           <div class="content">
             <h2>02</h2>
-            <h3>Error401</h3>
-            <p style="font-size: 0.8em">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis reprehenderit perferendis eum esse inventore quae.</p>
-            <a @click="project" style="cursor: pointer">Visit Site</a>
+            <h3>Henllo MEVN</h3>
+            <p style="font-size: 0.8em">Single page application built using MEVN technology.</p>
+            <router-link to="/" style="cursor: pointer">Visit Site</router-link>
             <p class="mt-3">*router link</p>
           </div>
         </div>
@@ -51,7 +51,7 @@
           <span></span>
           <div class="content">
             <h2>03</h2>
-            <h3>Post Title</h3>
+            <h3>Project Title</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis reprehenderit perferendis eum esse inventore quae.</p>
             <a href="#" @click="alert">Read More</a>
           </div>

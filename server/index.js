@@ -23,8 +23,9 @@ const HOST = process.env.SERVER_HOST || "localhost";
 const PORT = process.env.SERVER_PORT || 8000;
 const URL = `${HOST}:${PORT}`;
 const PATH = require("path");
+const CORS = /^.+localhost:(3000|8000|8080)$/;
 const CONF = {
-    origin: `http://${URL}`,
+    origin: `http://${URL}` || CORS,
     optionsSuccessStatus: 200,
 };
 

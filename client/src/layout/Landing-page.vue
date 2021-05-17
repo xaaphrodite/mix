@@ -1,34 +1,33 @@
 <template>
-    <main>
-        <header>
-            <navbar />
-            <sidebar />
-        </header>
-        <article>
-            <header-title title="Home |MEVN" />
-            <section class=" d-flex" id="landingpage" v-if="index">
-                <div class="container jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <h1 class="display-4">Henllo MEVN <img id="mevn" src="src/assets/js.png" alt=""></h1>
-                        <p class="lead">Single page application built using mevn technology.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="container">
-                    <section id="bravo">
-                        <ul>
-                            <li>
-                                <router-link to="" data-text="Service">Service</router-link></li><li>
-                                <router-link to="" data-text="Team">Team</router-link></li><li>
-                                <router-link to="" data-text="Movies">Movies</router-link></li>
-                        </ul>
-                        <img id="svg" src="src/assets/gift/giphy.gif">
-                    </section>
-                </div>
-            </section>
-            <router-view />
-        </article>
-    </main>
+  <main>
+    <header>
+      <navbar />
+      <sidebar />
+    </header>
+    <article>
+      <section class="d-flex" id="landingpage" v-if="index">
+        <header-title title="Home |MEVN" />
+        <div class="container jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Henllo MEVN <img id="mevn" src="src/assets/js.png" /></h1>
+            <p class="lead">Single page application built using MEVN technology.</p>
+            <hr />
+          </div>
+        </div>
+        <div class="container">
+          <section id="bravo">
+            <ul>
+              <li><router-link to="" data-text="Service">Service</router-link></li>
+              <li><router-link to="" data-text="Team">Team</router-link></li>
+              <li><router-link to="" data-text="Movies">Movies</router-link></li>
+            </ul>
+            <img id="svg" src="src/assets/gift/giphy.gif" />
+          </section>
+        </div>
+      </section>
+      <router-view />
+    </article>
+  </main>
 </template>
 
 <script>

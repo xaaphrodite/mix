@@ -1,43 +1,50 @@
 <template>
   <div class="sidebar">
-      <ul>
-        <li>
-          <router-link to="/">
-            <span class="icon"><i class="fas fa-home"></i></span>
-            <span class="title">Home</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            <span class="icon"><i class="fas fa-address-card"></i></span>
-            <span class="title">About</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            <span class="icon"><i class="fas fa-id-badge"></i></span>
-            <span class="title">Profile</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            <span class="icon"><i class="fas fa-cogs"></i></span>
-            <span class="title">Server side</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            <span class="icon"><i class="fas fa-question"></i></span>
-            <span class="title">Help</span>
-          </router-link>
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li>
+        <router-link to="/" @click="sideBar">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="title">Home</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/contact" @click="sideBar">
+          <span class="icon"><i class="fas fa-address-card"></i></span>
+          <span class="title">Contact</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/profile" @click="sideBar">
+          <span class="icon"><i class="fas fa-id-badge"></i></span>
+          <span class="title">Profile</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="" @click="sideBar">
+          <span class="icon"><i class="fas fa-cogs"></i></span>
+          <span class="title">Server side</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="" @click="sideBar">
+          <span class="icon"><i class="fas fa-question"></i></span>
+          <span class="title">Help</span>
+        </router-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  //
+  methods: {
+    sideBar() {
+      let sidebar = document.querySelector(".sidebar");
+      sidebar.classList.remove("active");
+      let navbar1 = document.querySelector(".navbar-collapse");
+      navbar1.classList.remove("show");
+    },
+  },
 };
 </script>
 
@@ -73,7 +80,7 @@ export default {
 }
 
 .sidebar ul li a:hover {
-  color: #14e4c9;
+  color: #80bc01;
 }
 
 .sidebar ul li a {
