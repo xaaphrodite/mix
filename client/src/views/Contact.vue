@@ -49,7 +49,8 @@ section {
   text-align: center;
 }
 
-div {
+div,
+main {
   text-align: center;
 }
 

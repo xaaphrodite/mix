@@ -70,7 +70,7 @@
           <div class="content">
             <h2>03</h2>
             <h3>Movies</h3>
-            <p>In <strong class="typing"></strong></p>
+            <p>In process..<strong class="typing"></strong></p>
             <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal">Read More</a>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default {
     };
   },
   mounted() {
-    this.type();
+    // this.type();
   },
   methods: {
     alert() {
