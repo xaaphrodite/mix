@@ -60,10 +60,10 @@
           </div>
           <div style="margin-top: 20px">
             <h3 id="cv">3 <span>Project complete</span></h3>
-            <button @click="alert" type="button" class="btn btn-outline-success">download cv</button>
+            <button @click="alert" type="button" class="btn btn-outline-success">Download CV</button>
           </div>
           <br />
-          <div style="margin-top: 20px" v-if="alertT" class="alert alert-primary" role="alert">Woops, this doesn't work yet</div>
+          <div style="margin-top: 20px" v-if="alertT" class="alert alert-success" role="alert">CV is not yet available</div>
         </div>
       </div>
     </section>
@@ -235,6 +235,10 @@ div {
 
   #cv {
     font-size: 0.8em;
+  }
+
+  #title {
+    font-size: 1em;
   }
 
   #credential {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <header-title title="Server |MEVN" />
     <br />
     <div class="container" style="margin-top: 15px">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

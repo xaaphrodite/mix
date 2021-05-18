@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <br />
     <div class="container">
       <header-title title="Contact |MEVN" />
@@ -7,7 +7,7 @@
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
             <h5 class="display-4">Contact</h5>
-            <p class="lead">Single page application built using MEVN technology.</p>
+            <p class="lead">Single page application built using MEVN technology</p>
           </div>
           <hr />
         </div>
@@ -28,7 +28,7 @@
       <img id="svg1" src="/src/assets/undraw/undraw8.svg" />
     </div>
     <h6 style="color: #57646f">Tap the JS logo for more options</h6>
-  </div>
+  </main>
 </template>
 
 <script>

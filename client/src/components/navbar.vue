@@ -1,19 +1,19 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" @click="klik">
     <div class="container-fluid">
       <router-link @click="sideBar" class="navbar-brand mevnapp" to="">
         Henllo MEVN
         <img src="/src/assets/js.png" />
-        <span style="font-size: 11px"> being development</span>
+        <span style="font-size: 11px"> being developed</span>
       </router-link>
       <button @click="rmSide" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-link" to="/skills">Skills</router-link>
-          <router-link class="nav-link" to="/project">Project</router-link>
-          <router-link class="nav-link" to="/contact">Contact</router-link>
+          <router-link v-if="imSkills" class="nav-link" to="/skills">Skills</router-link>
+          <router-link v-if="imProject" class="nav-link" to="/project">Project</router-link>
+          <router-link v-if="imContact" class="nav-link" to="/contact">Contact</router-link>
           <router-link class="nav-link disabled" to="" tabindex="-1" aria-disabled="true">AddPost</router-link>
         </div>
       </div>
@@ -23,6 +23,26 @@
 
 <script>
 export default {
+  computed: {
+    imSkills() {
+      if (this.$route.name === "Skills") {
+        return false;
+      }
+      return true;
+    },
+    imProject() {
+      if (this.$route.name === "Project") {
+        return false;
+      }
+      return true;
+    },
+    imContact() {
+      if (this.$route.name === "Contact") {
+        return false;
+      }
+      return true;
+    },
+  },
   methods: {
     sideBar() {
       let sidebar = document.querySelector(".sidebar");

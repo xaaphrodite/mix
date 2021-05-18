@@ -1,38 +1,59 @@
 <template>
-  <div class="sidebar">
-    <ul>
-      <li>
-        <router-link to="/" @click="sideBar">
-          <span class="icon"><i class="fas fa-home"></i></span>
-          <span class="title">Home</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/contact" @click="sideBar">
-          <span class="icon"><i class="fas fa-address-card"></i></span>
-          <span class="title">Contact</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/profile" @click="sideBar">
-          <span class="icon"><i class="fas fa-id-badge"></i></span>
-          <span class="title">Profile</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/server" @click="sideBar">
-          <span class="icon"><i class="fas fa-cogs"></i></span>
-          <span class="title">Server side</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="" @click="sideBar">
-          <span class="icon"><i class="fas fa-question"></i></span>
-          <span class="title">Help</span>
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <main>
+    <!-- Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="helpModalLabel">Help?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6>You should not need help yet, it's a very simple application:)</h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="sidebar">
+      <ul>
+        <li>
+          <router-link to="/" @click="sideBar">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Home</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/contact" @click="sideBar">
+            <span class="icon"><i class="fas fa-address-card"></i></span>
+            <span class="title">Contact</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/profile" @click="sideBar">
+            <span class="icon"><i class="fas fa-id-badge"></i></span>
+            <span class="title">Profile</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/server" @click="sideBar">
+            <span class="icon"><i class="fas fa-cogs"></i></span>
+            <span class="title">Server side</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="" @click="sideBar" data-bs-toggle="modal" data-bs-target="#helpModal">
+            <span class="icon"><i class="fas fa-question"></i></span>
+            <span class="title">Help</span>
+          </router-link>
+        </li>
+      </ul>
+    </div>
+  </main>
 </template>
 
 <script>

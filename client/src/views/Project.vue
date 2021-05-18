@@ -5,14 +5,32 @@
     <!-- </dashboard> -->
     <section v-if="visitSite">
       <br />
-      <!-- Modal -->
       <div v-if="alertT" class="alert alert-primary" role="alert">Woops, this doesn't work yet</div>
+      <!-- Modal -->
+      <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="movieModalLabel">Movies</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2>What project is this?</h2>
+              <p>This project will be a search application for all films around the world complete with all film descriptions such as directors, actors, metascore and even the income from the film.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Modal -->
       <div class="container">
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
             <h5 class="display-4">Project rasetiansyah@outlook.com</h5>
-            <p class="lead">a collection of projects and documentation that has been created</p>
+            <p class="lead">Collection of projects and documentation that has been created</p>
           </div>
           <hr />
         </div>
@@ -26,7 +44,7 @@
           <div class="content">
             <h2>01</h2>
             <h3>Error404</h3>
-            <p style="font-size: 0.8em">Site with Back end technology from Laravel and Vue as Front end, uses sanctum for user authentication and the site stores user data in local storage with key encryption.</p>
+            <p style="font-size: 0.8em">Site with Back end technology from Laravel and Vue as Front end, user authentication with key encryption.</p>
             <a href="https://xaaphrodite.herokuapp.com/">Visit Site</a>
             <p class="mt-3">xaaphrodite.herokuapp.com</p>
           </div>
@@ -51,9 +69,9 @@
           <span></span>
           <div class="content">
             <h2>03</h2>
-            <h3>Project Title</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis reprehenderit perferendis eum esse inventore quae.</p>
-            <a href="#" @click="alert">Read More</a>
+            <h3>Movies</h3>
+            <p>In <strong class="typing"></strong></p>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal">Read More</a>
           </div>
         </div>
       </div>
@@ -74,12 +92,23 @@ export default {
       visitSite: true,
     };
   },
+  mounted() {
+    this.type();
+  },
   methods: {
     alert() {
       this.alertT = true;
     },
     project() {
       this.$router.push("/error401");
+    },
+    type() {
+      var typed = new Typed(".typing", {
+        strings: [`process..`],
+        typeSpeed: 60,
+        backSpeed: 60,
+        loop: true,
+      });
     },
   },
 };

@@ -8,7 +8,7 @@
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
             <h5 class="display-4">Skills</h5>
-            <p class="lead">Abilities based on the things I have learned so far.</p>
+            <p class="lead">Abilities based on the things I have learned so far</p>
           </div>
           <hr />
         </div>
