@@ -14,51 +14,60 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="row-right">
-          <p class="text">"I have no special talents. I am only passionately curious." - Albert Einstein</p>
-          <div class="about-content container">
-            <ul>
-              <li class="text">
-                <span>Name: </span>
-                <span>Rivane Rasetiansyah</span>
-              </li>
-              <li class="text">
-                <span>Date of Birth: </span>
-                <span>February 18, 2001</span>
-              </li>
-              <li class="text">
-                <span>Education: </span>
-                <span>Universitas Jenderal Achmad Yani</span>
-              </li>
-              <li class="text">
-                <span>Address: </span>
-                <span>Bandung, Indonesia</span>
-              </li>
-              <li class="text">
-                <span>Zip code: </span>
-                <span>40394</span>
-              </li>
-              <li class="text">
-                <span>Email: </span>
-                <span id="email">rasetiansyah@outlook.com</span>
-              </li>
-              <li class="text">
-                <span>Phone: </span>
-                <span>+62 821-2923-1404</span>
-              </li>
-            </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img id="me" src="/src/assets/img/me1.jpg" />
           </div>
-          <div>
+          <div class="col-md-8">
+            <p class="text">"I have no special talents. I am only passionately curious." - Einstein</p>
+            <div class="about-content container">
+              <ul>
+                <li class="text">
+                  <span>Name: </span>
+                  <span>Rivane Rasetiansyah</span>
+                </li>
+                <li class="text">
+                  <span>Date of Birth: </span>
+                  <span>February 18, 2001</span>
+                </li>
+                <li class="text">
+                  <span>Education: </span>
+                  <span>Universitas Jenderal Achmad Yani</span>
+                </li>
+                <li class="text">
+                  <span>Majors: </span>
+                  <span>Informatics</span>
+                </li>
+                <li class="text">
+                  <span>Address: </span>
+                  <span>Bandung, Indonesia</span>
+                </li>
+                <li class="text">
+                  <span>Zip code: </span>
+                  <span>40394</span>
+                </li>
+                <li class="text">
+                  <span>Email: </span>
+                  <span id="email">rasetiansyah@outlook.com</span>
+                </li>
+                <li class="text">
+                  <span>Phone: </span>
+                  <span>+62 821-2923-1404</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top: 20px">
             <h3 id="cv">3 <span>Project complete</span></h3>
             <button @click="alert" type="button" class="btn btn-outline-success">download cv</button>
           </div>
           <br />
-          <div v-if="alertT" class="alert alert-primary" role="alert">Woops, this doesn't work yet</div>
+          <div style="margin-top: 20px" v-if="alertT" class="alert alert-primary" role="alert">Woops, this doesn't work yet</div>
         </div>
       </div>
     </section>
-    <section>
+    <section style="margin-top: 20px">
       <br />
       <div class="container title">
         <div class="jumbotron jumbotron-fluid">
@@ -101,7 +110,26 @@ export default {
 };
 </script>
 <style scoped>
-img {
+#me {
+  max-width: 150px;
+  border-radius: 15px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.col-md-4 {
+  transition: all 0.5s ease-in-out;
+  margin-left: 200px;
+}
+
+.col-md-8 {
+  transition: all 0.5s ease-in-out;
+  margin-left: -300px;
+}
+
+#cer {
+  transition: all 0.5s ease-in-out;
   /* border-radius: 15px; */
   margin-bottom: 20px;
   box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.5);
@@ -150,11 +178,11 @@ div {
   font-weight: 600;
 }
 
-.about .row-right h3 {
+.about .col h3 {
   color: #80bc01;
   font-size: 1.5rem;
 }
-.about .row-right h3 span {
+.about .col h3 span {
   color: #57646f;
   font-weight: 400;
 }
@@ -179,6 +207,14 @@ div {
 @media (max-width: 1390px) {
   #email {
     margin-left: 151px;
+  }
+
+  .col-md-4 {
+    margin-left: 100px;
+  }
+
+  .col-md-8 {
+    margin-left: -100px;
   }
 }
 
@@ -218,6 +254,21 @@ div {
 
   .btn {
     font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    margin-left: 0px;
+  }
+
+  .col-md-8 {
+    margin-left: 0px;
+  }
+
+  #me {
+    margin-top: 0px;
+    max-width: 115px;
   }
 }
 
