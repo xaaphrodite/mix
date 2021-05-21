@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <!-- <dashboard> -->
     <header-title title="Project |Henllo MEVN" />
     <!-- </dashboard> -->
@@ -75,10 +75,10 @@
           </div>
         </div>
       </div>
-      <img id="svg" src="/src/assets/undraw/undraw3.svg" />
+      <img id="svg" src="/assets/undraw/undraw3.svg" />
       <h6 style="color: #57646f">Tap the JS logo for more options</h6>
     </section>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -102,14 +102,14 @@ export default {
     project() {
       this.$router.push("/error401");
     },
-    type() {
-      var typed = new Typed(".typing", {
-        strings: [`process..`],
-        typeSpeed: 60,
-        backSpeed: 60,
-        loop: true,
-      });
-    },
+    // type() {
+    //   var typed = new Typed(".typing", {
+    //     strings: [`process..`],
+    //     typeSpeed: 60,
+    //     backSpeed: 60,
+    //     loop: true,
+    //   });
+    // },
   },
 };
 </script>

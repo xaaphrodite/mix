@@ -55,13 +55,13 @@ if (process.env.NODE_ENV === "production") {
 
 App.use((request, response, next) => {
     console.log(`${request.method} ${request.protocol}://${URL}${request.url}`);
-    // next();
+    next();
     // Protocol conditions
-    if (request.header("x-forwarded-proto") !== "https") {
-        response.redirect(`https://${request.header("host")}${request.url}`);
-    } else {
-        next();
-    }
+    // if (request.header("x-forwarded-proto") !== "https") {
+    //     response.redirect(`https://${request.header("host")}${request.url}`);
+    // } else {
+    //     next();
+    // }
 })
     .use(cors(CONF))
     .use(cookieParser())

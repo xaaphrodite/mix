@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img id="me" src="/src/assets/img/me1.jpg" />
+            <img id="me" src="/assets/img/me1.jpg" />
           </div>
           <div class="col-md-8">
             <p class="text">"I have no special talents. I am only passionately curious." - Einstein</p>
@@ -81,7 +81,7 @@
       <div class="container">
         <h4 id="title">JavaScript Algorithms and Data Structures</h4>
         <p class="text">Issued May 15 2021 No Expiration Date</p>
-        <img src="/src/assets/img/Ecertificate.jpg" id="cer" />
+        <img src="/assets/img/Ecertificate.jpg" id="cer" />
         <br />
         <p id="credential">https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures</p>
         <a href="https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures">

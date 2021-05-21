@@ -1,9 +1,9 @@
 import { InertiaProgress } from "@inertiajs/progress";
-import Nprogress from "nprogress";
-import router from "../src/routes/web.js";
-import { vueX } from "../src/vueX/store.js";
 import { createApp } from "vue";
-import App from "../src/App.vue";
+import Nprogress from "nprogress";
+import router from "./router";
+import store from "./store";
+import App from "./App.vue";
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ import App from "../src/App.vue";
 |
 */
 
-createApp(App).use(vueX).use(router).mount("#app");
+createApp(App).use(store).use(router).mount("#mevn");
 
 InertiaProgress.init({
   // The delay after which the progress bar will
@@ -34,7 +34,7 @@ InertiaProgress.init({
 
   // Whether the NProgress spinner will be shown.
   showSpinner: false,
-  //
+  // Ease
   easing: "ease",
 });
 

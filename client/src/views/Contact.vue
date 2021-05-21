@@ -15,17 +15,27 @@
       <section id="about">
         <div class="container">
           <ul>
-            <li><a href="https://www.instagram.com/rasetnsyh" data-text="Instagram">Instagram</a></li>
-            <li><a href="https://discordapp.com/users/742543110856507482" data-text="Discord">Discord</a></li>
-            <li><a href="https://github.com/xaaphrodite" data-text="GitHub">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/rivane-rasetiansyah-b55199212" data-text="LinkedIn">LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/xaaphrodite" data-text="Facebook">Facebook</a></li>
+            <li>
+              <a href="https://www.instagram.com/rasetnsyh" data-text="Instagram">Instagram</a>
+            </li>
+            <li>
+              <a href="https://discordapp.com/users/742543110856507482" data-text="Discord">Discord</a>
+            </li>
+            <li>
+              <a href="https://github.com/xaaphrodite" data-text="GitHub">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rivane-rasetiansyah-b55199212" data-text="LinkedIn">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/xaaphrodite" data-text="Facebook">Facebook</a>
+            </li>
           </ul>
         </div>
       </section>
       <p id="svg-p">mobile view</p>
-      <img id="svg" src="/src/assets/undraw/undraw9.svg" />
-      <img id="svg1" src="/src/assets/undraw/undraw8.svg" />
+      <img id="svg" src="/assets/undraw/undraw9.svg" />
+      <img id="svg1" src="/assets/undraw/undraw8.svg" />
     </div>
     <h6 style="color: #57646f">Tap the JS logo for more options</h6>
   </main>
