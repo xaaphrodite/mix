@@ -1,12 +1,15 @@
 {
-  "name": "improved",
-  "version": "0.1.0",
+  "name": "henllomevn",
+  "version": "1.0.1",
+  "description": "client_side",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [],
+  "author": "rasetiansyah",
   "dependencies": {
     "@inertiajs/progress": "^0.2.4",
     "axios": "^0.21.1",

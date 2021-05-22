@@ -23,38 +23,42 @@ const cookieParser = require("cookie-parser");
 const App = express();
 const HOST = process.env.HOST || "localhost";
 const PORT = process.env.PORT || 8000;
-const URL = `${HOST}:${PORT}`;
+const URI = `https://${HOST}:${PORT}`;
 const PATH = require("path");
 const CORS = /^.+localhost:(3000|8000|8080)$/;
 const CONF = {
-    origin: CORS || `http://${URL}`,
+    origin: CORS || URI,
     optionsSuccessStatus: 200,
 };
 
 // Production conditions
 if (process.env.NODE_ENV === "production") {
-    App.use("/", express.static(PATH.join(__dirname, "/dist")))
-        .use((request, response, next) => {
-            console.log(
-                `${request.method} ${request.protocol}://${URL}${request.url}`
+    App.use((request, response, next) => {
+        console.log(`${request.method} ${URI}${request.url}`);
+        // next();
+        // Protocol conditions
+        if (request.header("x-forwarded-proto") !== "https") {
+            response.redirect(
+                `https://${request.header("host")}${request.url}`
             );
-            // next();
-            // Protocol conditions
-            if (request.header("x-forwarded-proto") !== "https") {
-                response.redirect(
-                    `https://${request.header("host")}${request.url}`
-                );
-            } else {
-                next();
-            }
-        })
+        } else {
+            next();
+        }
+    })
+        .use(cors(CONF))
+        .use(cookieParser())
+        .use(express.json())
+        .use(express.urlencoded({ extended: true }))
+        .use(express.static(PATH.join(__dirname + "/public")))
+        .use("/api", require("./routes/api"))
+        .use("/", express.static(PATH.join(__dirname, "/dist")))
         .get(/.*/, (request, response) => {
             response.render(PATH.join(__dirname, "/dist/index"));
         });
 }
 
 App.use((request, response, next) => {
-    console.log(`${request.method} ${request.protocol}://${URL}${request.url}`);
+    console.log(`${request.method} ${URI}${request.url}`);
     next();
     // Protocol conditions
     // if (request.header("x-forwarded-proto") !== "https") {
@@ -96,5 +100,5 @@ mongoose
 
 // Server listen
 App.listen(PORT, () =>
-    console.log(`CORS|CSRF enabled, Henllo MEVN is listening on https://${URL}`)
+    console.log(`CORS|CSRF enabled, Henllo MEVN is listening on ${URI}`)
 );

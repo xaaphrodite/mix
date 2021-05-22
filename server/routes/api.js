@@ -16,17 +16,20 @@ const route = express.Router();
 const csrfProtection = require("../app/middleware/CSRFMiddleware");
 const upload = require("../app/middleware/multerMiddleware");
 
+// Global middlware
+// route.use(csrfProtection);
+
 // Controller
 const restController = require("../app/controllers/restController");
 
 // Entry with prefix '/api/mevn'
-route.get("/", [csrfProtection], restController.multipurpose);
+route.get("/", restController.multipurpose);
 
 // Endpoint
-route.get("/mevn", [csrfProtection], restController.fetchAllPost);
-route.get("/mevn/:id", [csrfProtection], restController.fetchPostByID);
-route.post("/mevn", [csrfProtection, upload], restController.createPost);
-route.patch("/mevn/:id", [csrfProtection, upload], restController.updatePost);
-route.delete("/mevn/:id", [csrfProtection], restController.deletePost);
+route.get("/mevn", restController.fetchAllPost);
+route.post("/mevn/:id", restController.fetchPostByID);
+route.post("/mevn", [upload], restController.createPost);
+route.patch("/mevn/:id", [upload], restController.updatePost);
+route.delete("/mevn/:id", restController.deletePost);
 
 module.exports = route;

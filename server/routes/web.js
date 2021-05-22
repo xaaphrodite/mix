@@ -15,9 +15,12 @@ const route = express.Router();
 // Middleware in array![]
 const csrfProtection = require("../app/middleware/CSRFMiddleware");
 
+// Global middlware
+// route.use(csrfProtection);
+
 // Controller
 const mevnController = require("../app/controllers/mevnController");
 
-route.get("/", csrfProtection, mevnController.index);
+route.get("/", mevnController.index);
 
 module.exports = route;

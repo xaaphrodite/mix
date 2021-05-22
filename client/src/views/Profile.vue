@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img id="me" src="/assets/img/me1.jpg" />
+            <img id="me" :src="`/uploads/post/${mevn.data?.image}`" />
           </div>
           <div class="col-md-8">
             <p class="text">"I have no special talents. I am only passionately curious." - Einstein</p>
@@ -94,13 +94,18 @@
 </template>
 
 <script>
+import henllomevn from "./@henllomevn";
 import headerTitle from "../components/header-title.vue";
 export default {
   components: { headerTitle },
   data() {
     return {
+      mevn: [],
       alertT: false,
     };
+  },
+  async created() {
+    this.mevn = await henllomevn.getAllPost();
   },
   methods: {
     alert() {

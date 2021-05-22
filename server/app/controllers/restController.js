@@ -21,7 +21,10 @@ module.exports = class restContoller {
     static async fetchAllPost(request, response) {
         try {
             const post = await Post.find();
-            response.status(200).json(post);
+            response.status(200).json({
+                data: post[0],
+                // _csrf: request.csrfToken(),
+            });
         } catch (error) {
             response.status(404).json({ message: "Not Found" });
         }
