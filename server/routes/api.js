@@ -12,12 +12,15 @@ const route = express.Router();
 |
 */
 
-// Middleware in array![]
+// Specific middleware with an array[]
 const csrfProtection = require("../app/middleware/CSRFMiddleware");
 const upload = require("../app/middleware/multerMiddleware");
 
 // Global middlware
-// route.use(csrfProtection);
+route.use(csrfProtection, (request, response, next) => {
+    response.cookie("henllomevn", request.csrfToken());
+    next();
+});
 
 // Controller
 const restController = require("../app/controllers/restController");

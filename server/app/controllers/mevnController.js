@@ -5,7 +5,6 @@ module.exports = class mevnContoller {
      * @return response
      */
     static async index(request, response) {
-        response.status = 200;
-        response.render("index");
+        response.status(200).render("index");
     }
 };

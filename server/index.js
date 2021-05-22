@@ -31,6 +31,9 @@ const CONF = {
     optionsSuccessStatus: 200,
 };
 
+// CSRF
+const csrfProtection = require("./app/middleware/CSRFMiddleware");
+
 // Production conditions
 if (process.env.NODE_ENV === "production") {
     App.use((request, response, next) => {
@@ -52,8 +55,10 @@ if (process.env.NODE_ENV === "production") {
         .use(express.static(PATH.join(__dirname + "/public")))
         .use("/api", require("./routes/api"))
         .use("/", express.static(PATH.join(__dirname, "/dist")))
-        .get(/.*/, (request, response) => {
-            response.render(PATH.join(__dirname, "/dist/index"));
+        .get(/.*/, csrfProtection, (request, response) => {
+            response
+                .cookie("henllomevn", request.csrfToken())
+                .render(PATH.join(__dirname, "/dist/index"));
         });
 }
 

@@ -16,7 +16,10 @@ const route = express.Router();
 const csrfProtection = require("../app/middleware/CSRFMiddleware");
 
 // Global middlware
-// route.use(csrfProtection);
+route.use(csrfProtection, (request, response, next) => {
+    response.cookie("henllomevn", request.csrfToken());
+    next();
+});
 
 // Controller
 const mevnController = require("../app/controllers/mevnController");
