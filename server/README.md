@@ -11,7 +11,7 @@ Create a new .env file and duplicate the contents of the .env.example
 ```sh
 $ npm install && cp .env.example .env && npm run dev
 ```
-Or
+Or Yarn
 ```sh
 $ yarn install && cp .env.example .env && yarn dev
 ```
