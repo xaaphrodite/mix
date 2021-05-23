@@ -25,35 +25,35 @@
               <ul>
                 <li class="text">
                   <span>Name: </span>
-                  <span>Rivane Rasetiansyah</span>
+                  <span>{{ mevn.data?.name }}</span>
                 </li>
                 <li class="text">
                   <span>Date of Birth: </span>
-                  <span>February 18, 2001</span>
+                  <span>{{ mevn.data?.dateOfBirth }}</span>
                 </li>
                 <li class="text">
                   <span>Education: </span>
-                  <span>Universitas Jenderal Achmad Yani</span>
+                  <span>{{ mevn.data?.education }}</span>
                 </li>
                 <li class="text">
                   <span>Majors: </span>
-                  <span>Informatics</span>
+                  <span>{{ mevn.data?.majors }}</span>
                 </li>
                 <li class="text">
                   <span>Address: </span>
-                  <span>Bandung, Indonesia</span>
+                  <span>{{ mevn.data?.address }}</span>
                 </li>
                 <li class="text">
                   <span>Zip code: </span>
-                  <span>40394</span>
+                  <span>{{ mevn.data?.zipCode }}</span>
                 </li>
                 <li class="text">
                   <span>Email: </span>
-                  <span id="email">rasetiansyah@outlook.com</span>
+                  <span id="email">{{ mevn.data?.email }}</span>
                 </li>
                 <li class="text">
                   <span>Phone: </span>
-                  <span>+62 821-2923-1404</span>
+                  <span>{{ mevn.data?.phone }}</span>
                 </li>
               </ul>
             </div>
@@ -96,6 +96,7 @@
 <script>
 import henllomevn from "./@henllomevn";
 import headerTitle from "../components/header-title.vue";
+import progress from "nprogress";
 export default {
   components: { headerTitle },
   data() {
@@ -105,7 +106,9 @@ export default {
     };
   },
   async created() {
-    this.mevn = await henllomevn.getAllPost();
+    progress.start();
+    this.mevn = await henllomevn.getOwner();
+    progress.done();
   },
   methods: {
     alert() {

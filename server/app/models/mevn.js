@@ -10,7 +10,7 @@ const mevnSchema = mongoose.Schema({
     address: String,
     zipCode: String,
     email: String,
-    phone: Number,
+    phone: String,
     created_at: {
         type: Date,
         default: Date.now,

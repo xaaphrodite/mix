@@ -24,15 +24,19 @@ route.use(csrfProtection, (request, response, next) => {
 
 // Controller
 const restController = require("../app/controllers/restController");
+const henllomevnController = require("../app/controllers/henllomevnController");
 
 // Entry with prefix '/api/mevn'
 route.get("/", restController.multipurpose);
 
 // Endpoint
-route.get("/mevn", restController.fetchAllPost);
+route.post("/mevn", restController.fetchAllPost);
 route.post("/mevn/:id", restController.fetchPostByID);
 route.post("/mevn", [upload], restController.createPost);
 route.patch("/mevn/:id", [upload], restController.updatePost);
 route.delete("/mevn/:id", restController.deletePost);
+
+// Henllomevn
+route.post("/henllomevn", henllomevnController.find);
 
 module.exports = route;
