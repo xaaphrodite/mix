@@ -5,6 +5,7 @@ import Contact from "../views/Contact.vue";
 import Skills from "../views/Skills.vue";
 import Profile from "../views/Profile.vue";
 import Server from "../views/Server.vue";
+import Login from '../views/auth/Login.vue'
 
 const routes = [
   {
@@ -43,6 +44,12 @@ const routes = [
       },
     ],
   },
+
+  {
+    path: "/login",
+    name: "Login",
+    component: Login
+  }
 ];
 
 const router = createRouter({

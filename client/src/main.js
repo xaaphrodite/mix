@@ -19,7 +19,21 @@ import App from "./App.vue";
 |
 */
 
-createApp(App).use(store).use(router).mount("#mevn");
+// Developmet condition
+import axios from "axios";
+import mevnCookie from "js-cookie";
+
+const henllomevn = () => {
+  let csrfToken = mevnCookie.get("henllomevn");
+  if (!csrfToken) {
+    axios.get("/api");
+    return;
+  }
+  return;
+};
+
+// App entry
+createApp(App).use(store).use(router).use(henllomevn).mount("#mevn");
 
 InertiaProgress.init({
   // The delay after which the progress bar will
