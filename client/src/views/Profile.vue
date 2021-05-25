@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img id="me" :src="`/uploads/post/${mevn.data?.image}`" />
+            <img id="me" :src="`/uploads/post/${mevn.data?.image}`" alt="" />
           </div>
           <div class="col-md-8">
             <p class="text">"I have no special talents. I am only passionately curious." - Einstein</p>
@@ -79,14 +79,26 @@
         </div>
       </div>
       <div class="container">
-        <h4 id="title">JavaScript Algorithms and Data Structures</h4>
-        <p class="text">Issued May 15 2021 No Expiration Date</p>
-        <img src="/assets/img/Ecertificate.jpg" id="cer" />
-        <br />
-        <p id="credential">https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures</p>
-        <a href="https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures">
-          <button class="btn btn-outline-success" style="margin-bottom: 20px">See credential</button>
-        </a>
+        <div>
+          <h4 id="title">JavaScript Algorithms and Data Structures</h4>
+          <p class="text">Issued May 15 2021 No Expiration Date</p>
+          <img :src="`/uploads/certificate/${mevn.data?.certificate[0]}`" id="cer" alt="" />
+          <br />
+          <p id="credential">https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures</p>
+          <a href="https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures">
+            <button class="btn btn-outline-success" style="margin-bottom: 20px">See credential</button>
+          </a>
+        </div>
+        <div>
+          <h4 id="title">Responsive Web Design</h4>
+          <p class="text">Issued May 23 2021 No Expiration Date</p>
+          <img :src="`/uploads/certificate/${mevn.data?.certificate[1]}`" id="cer" alt="" />
+          <br />
+          <p id="credential">https://freecodecamp.org/certification/xaaphrodite/responsive-web-design</p>
+          <a href="https://freecodecamp.org/certification/xaaphrodite/responsive-web-design">
+            <button class="btn btn-outline-success" style="margin-bottom: 20px">See credential</button>
+          </a>
+        </div>
       </div>
     </section>
   </div>

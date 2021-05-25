@@ -30,7 +30,7 @@
                 <router-link to="" data-text="Remove">Remove</router-link>
               </li>
               <li>
-                <router-link @click="exit" to="" data-text="Exit">Exit</router-link>
+                <router-link @click="exit" to="" data-text="Logout">Exit</router-link>
               </li>
             </ul>
             <!-- <img id="svg" src="/assets/gift/giphy.gif" /> -->
