@@ -28,6 +28,7 @@
 <script>
 import axios from "axios";
 import bcrypt from "bcryptjs";
+import CryptoJS from "crypto-js";
 import progress from "nprogress";
 import headerTitle from "../../components/header-title.vue";
 export default {
@@ -58,10 +59,13 @@ export default {
         .then((response) => {
           const username = response.data.data.username;
           const password = response.data.data.password;
+          const key = "756433";
           const isValid = bcrypt.compareSync(this.form.password, password);
           if (username === this.form.username) {
             if (isValid) {
-              this.$router.push("/profile");
+              const identifier = CryptoJS.AES.encrypt(username, key).toString();
+              localStorage.setItem("identifier", identifier);
+              this.$router.push("/cpanel");
             } else {
               this.message = "Wrong username or password";
               this.form.password = null;
@@ -138,7 +142,7 @@ button {
 
 .form {
   margin-top: 10px;
-  margin-left: -100px;
+  margin-left: -110px;
 }
 
 #undraw {

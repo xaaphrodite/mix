@@ -46,6 +46,12 @@
           </router-link>
         </li>
         <li>
+          <router-link to="/cpanel" @click="sideBar">
+            <span class="icon"><i class="fab fa-cpanel"></i></span>
+            <span class="title">cPanel</span>
+          </router-link>
+        </li>
+        <li>
           <router-link to="" @click="sideBar" data-bs-toggle="modal" data-bs-target="#helpModal">
             <span class="icon"><i class="fas fa-question"></i></span>
             <span class="title">Help</span>
