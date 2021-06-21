@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPage from "../layout/Landing-page.vue";
-import Project from "../views/Project.vue";
-import Contact from "../views/Contact.vue";
-import Skills from "../views/Skills.vue";
+import About from "../views/About.vue";
 import Profile from "../views/Profile.vue";
+import Contact from "../views/Contact.vue";
+import Project from "../views/Project.vue";
 import Server from "../views/Server.vue";
 import Login from "../views/auth/Login.vue";
 import CPanel from "../views/auth/layout/CPanel.vue";
@@ -15,9 +15,14 @@ const routes = [
     component: LandingPage,
     children: [
       {
-        path: "project",
-        name: "Project",
-        component: Project,
+        path: "about",
+        name: "About",
+        component: About,
+      },
+      {
+        path: "profile",
+        name: "Profile",
+        component: Profile,
       },
       {
         path: "contact",
@@ -25,14 +30,9 @@ const routes = [
         component: Contact,
       },
       {
-        path: "skills",
-        name: "Skills",
-        component: Skills,
-      },
-      {
-        path: "profile",
-        name: "Profile",
-        component: Profile,
+        path: "project",
+        name: "Project",
+        component: Project,
       },
       {
         path: "server",

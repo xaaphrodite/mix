@@ -21,34 +21,40 @@
     <!-- Modal -->
     <div class="sidebar">
       <ul>
-        <li>
+        <!-- <li>
           <router-link to="/" @click="sideBar">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span class="title">Home</span>
           </router-link>
+        </li> -->
+        <li>
+          <a href="/about" @click="sideBar">
+            <span class="icon"><i class="fas fa-bullhorn"></i></span>
+            <span class="title">About</span>
+          </a>
         </li>
         <li>
-          <router-link to="/contact" @click="sideBar">
-            <span class="icon"><i class="fas fa-address-card"></i></span>
-            <span class="title">Contact</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/profile" @click="sideBar">
+          <a href="/profile" @click="sideBar">
             <span class="icon"><i class="fas fa-id-badge"></i></span>
             <span class="title">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="/contact" @click="sideBar">
+            <span class="icon"><i class="fas fa-address-card"></i></span>
+            <span class="title">Contact</span>
+          </a>
+        </li>
+        <li>
+          <router-link to="/project" @click="sideBar">
+            <span class="icon"><i class="fas fa-project-diagram"></i></span>
+            <span class="title">Project</span>
           </router-link>
         </li>
         <li>
           <router-link to="/server" @click="sideBar">
             <span class="icon"><i class="fas fa-cogs"></i></span>
             <span class="title">Server side</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/cpanel" @click="sideBar">
-            <span class="icon"><i class="fab fa-cpanel"></i></span>
-            <span class="title">cPanel</span>
           </router-link>
         </li>
         <li>
@@ -68,8 +74,8 @@ export default {
     sideBar() {
       let sidebar = document.querySelector(".sidebar");
       sidebar.classList.remove("active");
-      let navbar1 = document.querySelector(".navbar-collapse");
-      navbar1.classList.remove("show");
+      // let navbar1 = document.querySelector(".navbar-collapse");
+      // navbar1.classList.remove("show");
     },
   },
 };

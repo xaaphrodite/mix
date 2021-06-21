@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <dashboard> -->
-    <header-title title="Project |Henllo MEVN" />
+    <header-title title="Project |MEVN" />
     <!-- </dashboard> -->
     <section v-if="visitSite">
       <br />
@@ -30,9 +30,9 @@
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
             <h5 class="display-4">Project rasetiansyah@outlook.com</h5>
-            <p class="lead">Collection of projects and documentation that has been created</p>
           </div>
           <hr />
+          <p class="lead">Collection of projects and documentation that has been created</p>
         </div>
       </div>
       <div class="container">
@@ -45,7 +45,7 @@
             <h2>01</h2>
             <h3>Error404</h3>
             <p style="font-size: 0.8em">Site with Back end technology from Laravel and Vue as Front end, user authentication with key encryption.</p>
-            <a href="https://xaaphrodite.herokuapp.com/">Visit Site</a>
+            <a target="_blank" href="https://xaaphrodite.herokuapp.com/">Visit Site</a>
             <p class="mt-3">xaaphrodite.herokuapp.com</p>
           </div>
         </div>
@@ -69,6 +69,19 @@
           <span></span>
           <div class="content">
             <h2>03</h2>
+            <h3>Bank of Documents</h3>
+            <p style="font-size: 0.8em">Website application for project management, built with MEVN</p>
+            <a target="_blank" href="https://bod-108.glitch.me/">Visit Site</a>
+            <p class="mt-3">bod-108.glitch.me</p>
+          </div>
+        </div>
+        <div class="card">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="content">
+            <h2>04</h2>
             <h3>Movies</h3>
             <p>In process..<strong class="typing"></strong></p>
             <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal">Read More</a>
@@ -76,6 +89,8 @@
         </div>
       </div>
       <img id="svg" src="/assets/undraw/undraw3.svg" />
+      <br />
+      <a href="/profile" style="color: #80bc01">Profile</a>
       <h6 style="color: #57646f">Tap the JS logo for more options</h6>
     </section>
   </div>

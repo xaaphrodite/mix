@@ -45,6 +45,11 @@ export default {
       return this.$route.name === "LandingPage";
     },
   },
+  async created() {
+    if (this.$route.name === "LandingPage") {
+      this.$router.push("/profile");
+    }
+  },
 };
 </script>
 

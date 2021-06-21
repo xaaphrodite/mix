@@ -17,6 +17,12 @@
   user-select: none;
 }
 
+#particles-js {
+  width: 100%;
+  /* height: 40vh; */
+  background: #fff;
+}
+
 a {
   text-decoration: none;
 }
