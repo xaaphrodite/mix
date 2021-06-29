@@ -19,6 +19,7 @@
           <button type="submit" name="login" id="login" class="btn btn-outline-success">Login</button>
         </form>
         <img id="undraw" src="/assets/undraw/undraw5.svg" alt="" />
+        <div id="particles-js" style="display: none"></div>
       </section>
       <slot />
     </article>

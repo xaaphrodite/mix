@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <img id="me" :src="`/uploads/post/${mevn.data?.image}`" alt="" />
+            <img id="me" :src="`/assets/post/image_1621598127981_me1.jpg`" alt="" />
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>Web Developer</h3>
@@ -29,19 +29,19 @@
                 <ul style="list-style-type: none">
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Name: </strong>
-                    {{ mevn.data?.name }}
+                    Rivane Rasetiansyah
                   </li>
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Date of Birth:</strong>
-                    {{ mevn.data?.dateOfBirth }}
+                    February 18, 2001
                   </li>
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Education:</strong>
-                    {{ mevn.data?.education }}
+                    Jenderal Achmad Yani University
                   </li>
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Majors:</strong>
-                    {{ mevn.data?.majors }}
+                    Informatics
                   </li>
                   <hr id="none" />
                 </ul>
@@ -50,19 +50,19 @@
                 <ul style="list-style-type: none">
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Address:</strong>
-                    {{ mevn.data?.address }}
+                    Bandung, Indonesia
                   </li>
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Zip code:</strong>
-                    {{ mevn.data?.zipCode }}
+                    40394
                   </li>
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Email:</strong>
-                    {{ mevn.data?.email }}
+                    rasetiansyah@outlook.com
                   </li>
                   <li>
                     <strong><i class="fas fa-angle-right"></i><span style="color: white"> | </span> Phone:</strong>
-                    {{ mevn.data?.phone }}
+                    +62 851-6110-3325
                   </li>
                 </ul>
               </div>
@@ -107,7 +107,7 @@
         <div>
           <h4 id="title"><b>JavaScript Algorithms and Data Structures</b></h4>
           <p class="text">Issued May 15 2021 No Expiration Date</p>
-          <img :src="`/uploads/certificate/${mevn.data?.certificate[0]}`" id="cer" alt="" />
+          <img :src="`/assets/certificate/JavaScriptAlgorithmsandDataStructures.jpg`" id="cer" alt="" />
           <br />
           <p id="credential">https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures</p>
           <a target="_blank" href="https://freecodecamp.org/certification/xaaphrodite/javascript-algorithms-and-data-structures">
@@ -117,7 +117,7 @@
         <div>
           <h4 id="title"><b>Responsive Web Design</b></h4>
           <p class="text">Issued May 23 2021 No Expiration Date</p>
-          <img :src="`/uploads/certificate/${mevn.data?.certificate[1]}`" id="cer" alt="" />
+          <img :src="`/assets/certificate/ResponsiveWebDesign.jpg`" id="cer" alt="" />
           <br />
           <p id="credential">https://freecodecamp.org/certification/xaaphrodite/responsive-web-design</p>
           <a target="_blank" href="https://freecodecamp.org/certification/xaaphrodite/responsive-web-design">
@@ -132,7 +132,7 @@
 </template>
 
 <script>
-import henllomevn from "./@henllomevn";
+// import henllomevn from "./@henllomevn";
 import headerTitle from "../components/header-title";
 import progress from "nprogress";
 import Skills from "../components/skills";
@@ -146,7 +146,7 @@ export default {
   },
   async created() {
     progress.start();
-    this.mevn = await henllomevn.getOwner();
+    // this.mevn = await henllomevn.getOwner();
     progress.done();
   },
   methods: {

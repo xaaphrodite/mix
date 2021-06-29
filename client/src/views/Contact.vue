@@ -7,6 +7,7 @@
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
             <div id="particles-js"></div>
+            <br />
             <h5 class="display-4">Contact me</h5>
             <!-- <p class="lead">Single page application built using MEVN technology</p> -->
           </div>
@@ -117,7 +118,7 @@ export default {
 #particles-js {
   width: 100%;
   height: 15vh;
-  margin-bottom: -140px;
+  margin-bottom: -155px;
 }
 .jumbotron {
   /* color: #edf0f1; */
@@ -304,12 +305,6 @@ export default {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 455px) {
-  #particles-js {
-    margin-bottom: -135px;
   }
 }
 </style>
