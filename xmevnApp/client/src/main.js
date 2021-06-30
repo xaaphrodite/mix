@@ -1,13 +1,15 @@
 import { InertiaProgress } from "@inertiajs/progress";
-import { createApp } from "vue";
+import mevnCookie from "js-cookie";
 import Nprogress from "nprogress";
+import { createApp } from "vue";
 import router from "./router";
 import store from "./store";
 import App from "./App.vue";
+import axios from "axios";
 
 /*
 |--------------------------------------------------------------------------
-| Henllo MEVN - client
+| mix - client
 |--------------------------------------------------------------------------
 |
 | Author    : rasetiansyah
@@ -20,38 +22,54 @@ import App from "./App.vue";
 */
 
 // Developmet condition
-import axios from "axios";
-import mevnCookie from "js-cookie";
-
 const henllomevn = () => {
-  let csrfToken = mevnCookie.get("henllomevn");
-  if (!csrfToken) {
-    // axios.get("/api");
+    let csrfToken = mevnCookie.get("henllomevn");
+    if (!csrfToken) {
+        // axios.get("/api");
+        return;
+    }
     return;
-  }
-  return;
+};
+
+// Heroku condition
+const wakeUp = () => {
+    setInterval(async () => {
+        await axios
+            .get("https://xaaph.herokuapp.com/profile")
+            .then((response) => {
+                console.log("is breathing");
+            })
+            .catch((error) => {
+                console.log("not breathing");
+            });
+    }, 300000);
 };
 
 // App entry
-createApp(App).use(store).use(router).use(henllomevn).mount("#mevn");
+createApp(App)
+    .use(store)
+    .use(router)
+    .use(henllomevn)
+    .use(wakeUp)
+    .mount("#mevn");
 
 InertiaProgress.init({
-  // The delay after which the progress bar will
-  // appear during navigation, in milliseconds.
-  delay: 250,
+    // The delay after which the progress bar will
+    // appear during navigation, in milliseconds.
+    delay: 250,
 
-  // The color of the progress bar.
-  color: "#80bc01",
+    // The color of the progress bar.
+    color: "#80bc01",
 
-  // Whether to include the default NProgress styles.
-  includeCSS: true,
+    // Whether to include the default NProgress styles.
+    includeCSS: true,
 
-  // Whether the NProgress spinner will be shown.
-  showSpinner: false,
-  // Ease
-  easing: "ease",
+    // Whether the NProgress spinner will be shown.
+    showSpinner: false,
+    // Ease
+    easing: "ease",
 });
 
 Nprogress.configure({
-  showSpinner: false,
+    showSpinner: false,
 });

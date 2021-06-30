@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/vue/assets/css/main.css">
     <link rel="icon" href="/assets/images/node.png">
     <link href="/vue/css/app.76e48967.css" rel="preload" as="style">
-    <link href="/vue/js/app.badac415.js" rel="preload" as="script">
+    <link href="/vue/js/app.335b1196.js" rel="preload" as="script">
     <link href="/vue/js/chunk-vendors.532867ba.js" rel="preload" as="script">
     <link href="/vue/css/app.76e48967.css" rel="stylesheet">
 </head>
@@ -33,7 +33,7 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
     <script src="/vue/js/chunk-vendors.532867ba.js"></script>
-    <script src="/vue/js/app.badac415.js"></script>
+    <script src="/vue/js/app.335b1196.js"></script>
 </body>
 
 </html>
