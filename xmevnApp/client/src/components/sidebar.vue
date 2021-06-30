@@ -41,7 +41,7 @@
         </li>
         <li>
           <a href="/contact" @click="sideBar">
-            <span class="icon"><i class="fas fa-address-card"></i></span>
+            <span class="icon"><i class="fas fa-mail-bulk"></i></span>
             <span class="title">Contact</span>
           </a>
         </li>

@@ -6,7 +6,7 @@
       <div class="container jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">
-            Henllo MEVN <img id="mevn" src="/assets/js.png" />
+            Henllo MEVN <img id="mevn" src="/assets/images/JS.png" />
             <span class="text">SERVER SIDE</span>
           </h1>
           <p class="lead">Single page application built using MEVN technology.</p>

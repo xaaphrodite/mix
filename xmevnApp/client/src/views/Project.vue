@@ -29,7 +29,7 @@
       <div class="container">
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
-            <h5 class="display-4">Project rasetiansyah@outlook.com</h5>
+            <h5 class="display-4">Project exhibition</h5>
           </div>
           <hr />
           <p class="lead">Collection of projects and documentation that has been created</p>
