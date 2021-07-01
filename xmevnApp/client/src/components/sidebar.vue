@@ -22,7 +22,7 @@
         <div class="sidebar">
             <ul>
                 <div class="mixL text-center">
-                    <img class="none" id="unicorn" src="/assets/images/MPSG.png" />
+                    <img class="none" id="unicorn" src="/assets/images/mpsG.png" />
                 <hr style="margin-top: -15px">
                 </div>
                 <!-- <li>

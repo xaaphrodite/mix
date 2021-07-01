@@ -36,14 +36,14 @@ const henllomevn = () => {
 const wakeUp = () => {
     setInterval(async () => {
         await axios
-            .get("https://xaaph.herokuapp.com/profile")
+            .get("https://mixpersonal.herokuapp.com/")
             .then((response) => {
                 console.log("is breathing");
             })
             .catch((error) => {
                 console.log("not breathing");
             });
-    }, 300000);
+    }, 240000);
 };
 
 // Firebase
