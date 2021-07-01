@@ -21,10 +21,10 @@
         <!-- Modal -->
         <div class="sidebar">
             <ul>
-                <div class="text-center">
-                    <img class="none" id="unicorn" src="/assets/images/MSP.png" />
-                </div>
+                <div class="mixL text-center">
+                    <img class="none" id="unicorn" src="/assets/images/MPSG.png" />
                 <hr style="margin-top: -15px">
+                </div>
                 <!-- <li>
                       <router-link to="/" @click="sideBar">
                         <span class="icon"><i class="fas fa-home"></i></span>
@@ -68,7 +68,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="" @click="sideBar" data-bs-toggle="modal" data-bs-target="#helpModal">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#helpModal">
                         <span class="icon"><i class="fas fa-question"></i></span>
                         <span class="title">Help</span>
                     </a>
@@ -95,6 +95,9 @@ export default {
 <style scoped>
 #unicorn {
     transition: all 0.5s ease 0s;
+}
+.mixL{
+    margin-left: -11px;
 }
 .none {
     opacity: 0;

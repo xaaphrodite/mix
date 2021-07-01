@@ -4,7 +4,7 @@
             <router-link @click="sideBar" class="navbar-brand mevnapp" to="">
                 <!-- MixPersonal -->
                 <img id="logo" src="/assets/images/lMPSG.png" />
-                <p class="none" id="logo1"><i class="fas fa-arrow-left"></i> Close</p>
+                <p class="none" id="logo1"><i class="fas fa-arrow-left"></i> close</p>
                 <!-- <span style="font-size: 11px; margin-left: 207px"> being developed</span> -->
             </router-link>
 
