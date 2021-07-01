@@ -9,8 +9,8 @@
                 <header-title title="Home |MixPersonal" />
 
                 <div @click="sideBar" class="text-center" id="logoLP">
-                    <img src="/assets/images/MixPersonalG.png" />
-                    <p style="margin-top: -50px">Click me!</p>
+                    <img src="/assets/images/MSP.png" />
+                    <p style="margin-top: -65px">Click me!</p>
                 </div>
                 
                 <!-- <div class="container jumbotron jumbotron-fluid">
@@ -34,7 +34,7 @@
                         <img id="svg" src="/assets/images/MixPersonal1.png" />
                       </section>
                     </div> -->
-
+            <div id="particles-js" style="display: none"></div>
             </section>
             <router-view />
         </article>
@@ -59,12 +59,16 @@ export default {
     },
     methods: {
         sideBar() {
-            let sidebar = document.querySelector(".sidebar");
-            sidebar.classList.toggle("active");
-            document.getElementById("unicorn").classList.toggle("none");
-            document.getElementById("logo").classList.toggle("none");
-            document.getElementById("logo1").classList.toggle("none");
-            document.getElementById("logoLP").classList.toggle("none");
+            try {
+                let sidebar = document.querySelector(".sidebar");
+                sidebar.classList.toggle("active");
+                document.getElementById("unicorn").classList.toggle("none");
+                document.getElementById("logo").classList.toggle("none");
+                document.getElementById("logo1").classList.toggle("none");
+                document.getElementById("logoLP").classList.toggle("none");
+            } catch (error) {
+                // 
+            }
         },
     },
 };
@@ -79,6 +83,10 @@ export default {
 }
 #mevn {
     width: 70px;
+}
+
+#logoLP{
+    transition: all 0.5s ease 0s;
 }
 
 .text-center {

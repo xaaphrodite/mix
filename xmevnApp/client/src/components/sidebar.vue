@@ -9,7 +9,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h6>Tap/click the "MixPersonal site" for detailed options</h6>
+                        <h6>Tap/click the meteor logo for detailed options</h6>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -22,9 +22,9 @@
         <div class="sidebar">
             <ul>
                 <div class="text-center">
-                    <img class="none" id="unicorn" src="/assets/images/MixPersonalG.png" />
+                    <img class="none" id="unicorn" src="/assets/images/MSP.png" />
                 </div>
-                <hr style="margin-top: -30px">
+                <hr style="margin-top: -15px">
                 <!-- <li>
                       <router-link to="/" @click="sideBar">
                         <span class="icon"><i class="fas fa-home"></i></span>

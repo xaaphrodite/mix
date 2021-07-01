@@ -6,7 +6,7 @@
             <div class="container jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1 class="display-4">
-                        MixPersonal site <img id="mevn" src="/assets/images/UnicornC.png" />
+                        MixPersonal site <img id="mevn" src="/assets/images/lMPSC.png" />
                         <span class="text">SERVER SIDE</span>
                     </h1>
                     <p class="lead" id="text">Single page application built with MEVN technology.</p>
@@ -63,14 +63,14 @@ export default {
 <style scoped>
 #mevn {
     width: 200px;
-    margin-left: -65px;
+    margin-left: -85px;
     margin-right: 0px;
-    margin-top: -55px;
+    margin-top: -20px;
 }
 
 .text {
     font-size: 0.5em;
-    margin-left: -45px;
+    margin-left: -70px;
 }
 
 #text{

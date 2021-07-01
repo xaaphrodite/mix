@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <router-link @click="sideBar" class="navbar-brand mevnapp" to="">
                 <!-- MixPersonal -->
-                <img id="logo" src="/assets/images/MixPersonalsite.png" />
+                <img id="logo" src="/assets/images/lMPSG.png" />
                 <p class="none" id="logo1"><i class="fas fa-arrow-left"></i> Close</p>
                 <!-- <span style="font-size: 11px; margin-left: 207px"> being developed</span> -->
             </router-link>
@@ -26,12 +26,16 @@
 export default {
     methods: {
         sideBar() {
-            let sidebar = document.querySelector(".sidebar");
-            sidebar.classList.toggle("active");
-            document.getElementById("unicorn").classList.toggle("none");
-            document.getElementById("logo").classList.toggle("none");
-            document.getElementById("logo1").classList.toggle("none");
-            document.getElementById("logoLP").classList.toggle("none");
+            try {
+                let sidebar = document.querySelector(".sidebar");
+                sidebar.classList.toggle("active");
+                document.getElementById("unicorn").classList.toggle("none");
+                document.getElementById("logo").classList.toggle("none");
+                document.getElementById("logo1").classList.toggle("none");
+                document.getElementById("logoLP").classList.toggle("none");
+            } catch (error) {
+                // 
+            }
         },
         rmSide() {
             let sidebar = document.querySelector(".sidebar");
@@ -55,6 +59,7 @@ nav {
 
 img {
     width: 200px;
+    margin-left: -75px;
     margin-top: -85px;
     position: fixed;
     transition: all 0.5s ease 0s;

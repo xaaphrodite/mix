@@ -92,7 +92,7 @@
                 </div>
             </div>
             <router-link to="/project" style="color: #80bc01; margin-top: -20px">Project</router-link>
-            <h6 style="color: #57646f" id="text">Tap the JS logo for more options</h6>
+            <h6 style="color: #57646f" id="text">Tap the meteor logo for detailed options</h6>
         </section>
     </div>
     <!-- end of skills page -->

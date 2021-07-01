@@ -46,8 +46,7 @@
                     <div class="content">
                         <h2>01</h2>
                         <h3>Error404</h3>
-                        <p style="font-size: 0.8em">Site with Back end technology from Laravel and Vue as Front end,
-                            user authentication with key encryption.</p>
+                        <p style="font-size: 0.8em">Website application built with Laravel and Vue.</p>
                         <a target="_blank" href="https://xaaphrodite.herokuapp.com/">Visit Site</a>
                         <p class="mt-3">xaaphrodite.herokuapp.com</p>
                     </div>
@@ -59,7 +58,7 @@
                     <span></span>
                     <div class="content">
                         <h2>02</h2>
-                        <h3>Henllo MEVN</h3>
+                        <h3>MixPersonal site</h3>
                         <p style="font-size: 0.8em">Single page application built with Laravel and Vue.</p>
                         <a href="/about" style="cursor: pointer">Redirect</a>
                         <p class="mt-3">*anchor</p>
