@@ -5,7 +5,7 @@
       <sidebar />
     </header>
     <article>
-      <section class="d-flex" id="landingpage" v-if="index">
+      <section class="d-flex" id="landingpage" v-if="MixPersonal">
         <header-title title="Home |MEVN" />
         <div class="container jumbotron jumbotron-fluid">
           <div class="container">
@@ -41,7 +41,7 @@ import Sidebar from "../components/sidebar.vue";
 export default {
   components: { navbar, Sidebar, HeaderTitle },
   computed: {
-    index() {
+    MixPersonal() {
       return this.$route.name === "LandingPage";
     },
   },

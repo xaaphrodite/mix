@@ -2,6 +2,7 @@ import { InertiaProgress } from "@inertiajs/progress";
 import mevnCookie from "js-cookie";
 import Nprogress from "nprogress";
 import { createApp } from "vue";
+import firebase from "firebase/app";
 import router from "./router";
 import store from "./store";
 import App from "./App.vue";
@@ -9,7 +10,7 @@ import axios from "axios";
 
 /*
 |--------------------------------------------------------------------------
-| mix - client
+| MixPersonal site - client
 |--------------------------------------------------------------------------
 |
 | Author    : rasetiansyah
@@ -44,6 +45,20 @@ const wakeUp = () => {
             });
     }, 300000);
 };
+
+// Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyCdXfTV8ftMz1jz72JDpGPN-6vBIOq4psw",
+    authDomain: "mixpersonalsite.firebaseapp.com",
+    projectId: "mixpersonalsite",
+    storageBucket: "mixpersonalsite.appspot.com",
+    messagingSenderId: "190848671663",
+    appId: "1:190848671663:web:787d5a8d0c52f25650595a",
+    measurementId: "G-H47HYWT0RQ",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 // App entry
 createApp(App)

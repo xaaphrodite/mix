@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/{xmevnApp}', function () {
     return view('xmevnApp');
-})->where('xmevnApp', 'about|profile|contact|project|server|login');
+})->where('xmevnApp', 'about|profile|contact|project|server|login|MixPersonal');
 
 // !Laravel mix routes (Vue) ---
 
