@@ -9,7 +9,7 @@
                 <header-title title="Home |MixPersonal" />
 
                 <div @click="sideBar" class="text-center" id="logoLP">
-                    <img src="/assets/images/MixPersonal1.png" />
+                    <img src="/assets/images/MixPersonalG.png" />
                     <p style="margin-top: -50px">Click me!</p>
                 </div>
                 
