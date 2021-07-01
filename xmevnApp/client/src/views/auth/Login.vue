@@ -12,7 +12,7 @@
                                 <a href="/">
                                     <h1 class="display-4">MixPersonal si<span style="color: #14E4C9">te.</span> <img
                                             id="mevn" src="/assets/undraw/undraw2.svg" /></h1>
-                                    <hr style="margin-top: -12px"> 
+                                    <hr style="margin-top: -12px">
                                 </a>
                             </div>
                         </div>
@@ -32,12 +32,12 @@
                         </div>
 
                         <div class="text-start">
-                          <button type="submit" name="login" id="login" class="submit btn btn-outline">Sign In</button>
-                          <button class="request none btn btn-success" type="button" disabled>
-                              <span class="spinner-border spinner-border-sm" role="status"
-                                  aria-hidden="true"></span>
-                              request...
-                          </button>
+                            <button type="submit" name="login" id="login" class="submit btn btn-outline">Sign
+                                In</button>
+                            <button class="request none btn btn-success" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                request...
+                            </button>
                         </div>
 
                         <img id="undraw" src="/assets/undraw/undraw6.svg" alt="" />

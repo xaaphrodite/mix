@@ -1,30 +1,31 @@
 <template>
-  <main>
-    <header-title title="Server |MEVN" />
-    <br />
-    <div class="container" style="margin-top: 15px">
-      <div class="container jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">
-            MixPersonal site <img id="mevn" src="/assets/images/JS.png" />
-            <span class="text">SERVER SIDE</span>
-          </h1>
-          <p class="lead">Single page application built with MEVN technology.</p>
-          <hr />
+    <main>
+        <header-title title="Denied |MixPersonal" />
+        <br />
+        <div class="container" style="margin-top: 15px">
+            <div class="container jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">
+                        MixPersonal site <img id="mevn" src="/assets/images/JS.png" />
+                        <span class="text">SERVER SIDE</span>
+                    </h1>
+                    <p class="lead">Single page application built with MEVN technology.</p>
+                    <hr />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container title">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid">
-          <h5 class="display-4 message">You are accessing an endpoint that is not available or to the restricted area, you don't have permission</h5>
-          <p class="lead">
-            redirect in <span style="color: #80bc01">{{ timeLeft }}..</span>
-          </p>
+        <div class="container title">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid">
+                    <h5 class="display-4 message">You are accessing an endpoint that is not available or to the
+                        restricted area, you don't have permission</h5>
+                    <p class="lead">
+                        redirect in <span style="color: #80bc01">{{ timeLeft }}..</span>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </main>
+    </main>
 </template>
 
 <script>

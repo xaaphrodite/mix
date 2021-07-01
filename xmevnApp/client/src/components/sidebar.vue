@@ -1,77 +1,82 @@
 <template>
-  <main>
-    <!-- Modal -->
-    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="helpModalLabel">Help?</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h6>You should not need help yet, it's a very simple application:)</h6>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="helpModalLabel">Help?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Tap/click the "MixPersonal site" for detailed options</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div class="sidebar">
-      <ul>
-        <!-- <li>
-          <router-link to="/" @click="sideBar">
-            <span class="icon"><i class="fas fa-home"></i></span>
-            <span class="title">Home</span>
-          </router-link>
-        </li> -->
-        <li>
-          <a href="/about" @click="sideBar">
-            <span class="icon"><i class="fas fa-bullhorn"></i></span>
-            <span class="title">About</span>
-          </a>
-        </li>
-        <li>
-          <a href="/profile" @click="sideBar">
-            <span class="icon"><i class="fas fa-id-badge"></i></span>
-            <span class="title">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="/contact" @click="sideBar">
-            <span class="icon"><i class="fas fa-mail-bulk"></i></span>
-            <span class="title">Contact</span>
-          </a>
-        </li>
-        <li>
-          <router-link to="/project" @click="sideBar">
-            <span class="icon"><i class="fas fa-project-diagram"></i></span>
-            <span class="title">Project</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/server" @click="sideBar">
-            <span class="icon"><i class="fas fa-cogs"></i></span>
-            <span class="title">Settings</span>
-          </router-link>
-        </li>
-        <li>
-          <a href="/login" @click="sideBar">
-            <span class="icon"><i class="fas fa-seedling"></i></span>
-            <span class="title">restricted area</span>
-          </a>
-        </li>
-        <li>
-          <router-link to="" @click="sideBar" data-bs-toggle="modal" data-bs-target="#helpModal">
-            <span class="icon"><i class="fas fa-question"></i></span>
-            <span class="title">Help</span>
-          </router-link>
-        </li>
-      </ul>
-    </div>
-  </main>
+        <!-- Modal -->
+        <div class="sidebar">
+            <ul>
+                <div class="text-center">
+                    <img class="none" id="unicorn" src="/assets/images/MixPersonalG.png" />
+                </div>
+                <hr style="margin-top: -30px">
+                <!-- <li>
+                      <router-link to="/" @click="sideBar">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="title">Home</span>
+                      </router-link>
+                    </li> -->
+                <li>
+                    <a href="/about" @click="sideBar">
+                        <span class="icon"><i class="fas fa-bullhorn"></i></span>
+                        <span class="title">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/profile" @click="sideBar">
+                        <span class="icon"><i class="fas fa-id-badge"></i></span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" @click="sideBar">
+                        <span class="icon"><i class="fas fa-mail-bulk"></i></span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/project" @click="sideBar">
+                        <span class="icon"><i class="fas fa-project-diagram"></i></span>
+                        <span class="title">Project</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/server" @click="sideBar">
+                        <span class="icon"><i class="fas fa-cogs"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/login" @click="sideBar">
+                        <span class="icon"><i class="fas fa-seedling"></i></span>
+                        <span class="title">restricted area</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" @click="sideBar" data-bs-toggle="modal" data-bs-target="#helpModal">
+                        <span class="icon"><i class="fas fa-question"></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <!-- <hr id="unicorn"> -->
+            </ul>
+        </div>
+    </main>
 </template>
 
 <script>
@@ -88,6 +93,12 @@ export default {
 </script>
 
 <style scoped>
+#unicorn {
+    transition: all 0.5s ease 0s;
+}
+.none {
+    opacity: 0;
+}
 .sidebar {
     position: fixed;
     width: 60px;
@@ -100,10 +111,15 @@ export default {
     z-index: 1;
 }
 
-.sidebar:hover,
-.sidebar.active {
+.sidebar.sidebar.active {
+    left: 0px;
     width: 300px;
 }
+
+/* .sidebar:hover,
+.sidebar.active {
+    width: 300px;
+} */
 
 .sidebar > ul {
     position: absolute;

@@ -2,7 +2,8 @@
     <main>
         <br />
         <div class="container">
-            <header-title title="Contact |MEVN" />
+            <header-title title="Contact |MixPersonal" />
+            <br>
             <div class="container">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container-fluid">
@@ -11,7 +12,8 @@
                         <h5 class="display-4">Get in touch</h5>
                     </div>
                     <hr />
-                    <p class="lead">Apart from being able to contact us on the profile page, you can also contact us here.</p>
+                    <p class="lead" id="text">Apart from being able to contact us on the profile page, you can also
+                        contact us here.</p>
                 </div>
             </div>
             <section id="contact" class="contact">
@@ -64,7 +66,7 @@
                                                 oninput="setCustomValidity('')" />
                                             <div class="validate"></div>
                                         </div>
-                                        
+
                                         <div class="form-group col-md-6">
                                             <label for="name">Email</label>
                                             <input v-model="form.email" type="email" class="form-control" name="email"
@@ -74,7 +76,7 @@
                                             <div class="validate"></div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label for="name">Subject</label>
                                         <input v-model="form.subject" type="text" class="form-control" name="subject"
@@ -83,7 +85,7 @@
                                             oninput="setCustomValidity('')" />
                                         <div class="validate"></div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label for="name">Message</label>
                                         <textarea v-model="form.message" class="form-control" name="message" rows="10"
@@ -471,6 +473,10 @@ textarea {
 
     #undraw11 {
         display: none;
+    }
+
+    #text {
+        font-size: 1em;
     }
 }
 

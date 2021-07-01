@@ -1,45 +1,47 @@
 <template>
-  <main>
-    <header>
-      <header-title title="cPanel |MEVN" />
-      <navbar />
-      <sidebar />
-    </header>
-    <article>
-      <br />
-      <section class="d-flex" id="landingpage">
-        <div class="container">
-          <section>
-            <div class="container jumbotron jumbotron-fluid">
-              <div class="container">
-                <h1 class="display-4">
-                  Henllo {{ whoAmI }}
-                  <!--<img id="mevn" src="/assets/js.png" />-->
-                </h1>
-                <p class="lead">Welcome back to your personal site</p>
-                <hr />
-                <strong>Full access rights in your hands, keep the spirit and keep working!</strong>
-              </div>
-            </div>
-            <ul id="cpanelOption" style="margin-top: 50px">
-              <li>
-                <router-link to="" data-text="Add">Add</router-link>
-              </li>
-              <li><router-link to="" data-text="Update">Update</router-link></li>
-              <li>
-                <router-link to="" data-text="Remove">Remove</router-link>
-              </li>
-              <li>
-                <router-link @click="exit" to="" data-text="Logout">Exit</router-link>
-              </li>
-            </ul>
-            <!-- <img id="svg" src="/assets/gift/giphy.gif" /> -->
-          </section>
-        </div>
-      </section>
-      <router-view />
-    </article>
-  </main>
+    <main>
+        <header>
+            <header-title title="Licensed |MixPersonal" />
+            <navbar />
+            <sidebar />
+        </header>
+        <article>
+            <br />
+            <section class="d-flex" id="landingpage">
+                <div class="container">
+                    <section>
+                        <div class="container jumbotron jumbotron-fluid">
+                            <div class="container">
+                                <h1 class="display-4">
+                                    Henllo {{ whoAmI }}
+                                    <!--<img id="mevn" src="/assets/js.png" />-->
+                                </h1>
+                                <p class="lead">Welcome back to your personal site</p>
+                                <hr />
+                                <strong>Full access rights in your hands, keep the spirit and keep working!</strong>
+                            </div>
+                        </div>
+                        <ul id="cpanelOption" style="margin-top: 50px">
+                            <li>
+                                <router-link to="" data-text="Add">Add</router-link>
+                            </li>
+                            <li>
+                                <router-link to="" data-text="Update">Update</router-link>
+                            </li>
+                            <li>
+                                <router-link to="" data-text="Remove">Remove</router-link>
+                            </li>
+                            <li>
+                                <router-link @click="exit" to="" data-text="Logout">Exit</router-link>
+                            </li>
+                        </ul>
+                        <!-- <img id="svg" src="/assets/gift/giphy.gif" /> -->
+                    </section>
+                </div>
+            </section>
+            <router-view />
+        </article>
+    </main>
 </template>
 
 <script>
